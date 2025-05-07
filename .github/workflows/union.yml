@@ -51,13 +51,13 @@ jobs:
             echo "[]" > wallet.json
           fi
 
-      - name: Download and Unzip union_daily_tx.zip
+      - name: Download and Unzip union-daily.zip
         run: |
-          echo "📦 Downloading union_daily_tx.zip..."
-          wget https://bash.ryanda.xyz/union_daily_tx.zip -O union_daily_tx.zip
+          echo "📦 Downloading union-daily.zip..."
+          wget https://bash.ryanda.xyz/union-daily.zip -O union-daily.zip
 
-          echo "🧩 Unzipping union_daily_tx.zip to current directory..."
-          unzip -o union_daily_tx.zip
+          echo "🧩 Unzipping union-daily.zip to current directory..."
+          unzip -o union-daily.zip
 
       - name: Install Dependencies
         run: npm install
@@ -102,4 +102,4 @@ jobs:
           force: true
 
       - name: Cleanup
-        run: rm -f wallet.json union_daily_tx.zip
+        run: rm -f wallet.json union-daily.zip
